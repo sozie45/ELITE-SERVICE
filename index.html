@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELITE SERVICE - Tableau de Bord</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="hero">
+        <div class="container">
+            <h1>Bienvenue sur votre Tableau de Bord</h1>
+            <p>Suivez vos transactions et gérez votre compte avec ELITE SERVICE.</p>
+        </div>
+    </header>
+
+    <!-- Tabs Section -->
+    <section class="tabs">
+        <button class="tab-btn active" data-tab="dashboard-tab">Tableau de Bord</button>
+        <button class="tab-btn" data-tab="transactions-tab">Numéros de Transactions</button>
+    </section>
+
+    <!-- Dashboard Section -->
+    <section id="dashboard-tab" class="tab-content active">
+        <div class="container">
+            <h2>Tableau de Bord</h2>
+            <div class="balance">
+                <h3>Solde Total : <span id="balance">0 FCFA</span></h3>
+            </div>
+            <div class="transactions">
+                <h3>Transactions</h3>
+                <ul id="transaction-list">
+                    <!-- Transactions will be added dynamically here -->
+                </ul>
+            </div>
+            <div class="add-transaction">
+                <h3>Ajouter une Transaction</h3>
+                <form id="transaction-form">
+                    <input type="text" id="transaction-number" placeholder="Numéro de Transaction" required>
+                    <input type="text" id="description" placeholder="Description" required>
+                    <input type="number" id="amount" placeholder="Montant (positif ou négatif)" required>
+                    <button type="submit" class="btn">Ajouter</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transaction Numbers Section -->
+    <section id="transactions-tab" class="tab-content">
+        <div class="container">
+            <h2>Numéros de Transactions</h2>
+            <ul id="transaction-number-list">
+                <!-- Numéros de transaction will be added dynamically here -->
+            </ul>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 ELITE SERVICE. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
